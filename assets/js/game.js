@@ -1,6 +1,6 @@
 let targetScore = Math.floor(Math.random()*30+20)
-let wins = 0
-let losses = 0
+let wins1 = 0
+let losses1 = 0
 let gemValues = [0,0,0,0]
 let runningScore = 0
 let previousScore = 0
@@ -36,12 +36,12 @@ function handleClick(x){
 
     if(targetScore === runningScore){
         console.log("game won")
-        wins += 1
+        wins1 += 1
         startGame()
     }
     else if(targetScore < runningScore){
         console.log("game lost")
-         losses += 1
+         losses1 += 1
         startGame()
     }
 
@@ -51,8 +51,8 @@ function handleClick(x){
 function displayScoreBoard(){
     //set wins using jQuery
     //https://stackoverflow.com/questions/1309452/how-to-replace-innerhtml-of-a-div-using-jquery
-    $('#wins').html(wins.toString())
-    $('#losses').html(losses.toString())
+    $('#wins').html(wins1.toString())
+    $('#losses').html(losses1.toString())
     $('#target-score').html(targetScore.toString())
     $('#score').html(runningScore.toString())
     $('#previous-score').html(previousScore.toString())
